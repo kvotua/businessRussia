@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500&display=swap');
+
+body, html {
+  position: fixed;
+  padding: 162px 308px;
+  inset: 0;
+  background-image: url("images/background.png");
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .map {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+    align-items: start;
+  }
+
+  .container {
+    display: none;
+    height: auto;
+    margin: 0;
+  }
+}
+
+.container {
+  width: 60vw;
+  height: 70vh;
+  min-width: 710px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+}
+
+.form, .map {
+  flex: 1;
+}
+
+.form {
+  margin-top: 91px;
+  max-width: 530px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin-left: 91px;
+}
+
+.map {
+  margin-top: 51px;
+  margin-bottom: 42px;
+  justify-content: right;
+  margin-right: 91px;
+  display: flex;
+}
+
+iframe {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.flag div {
+  width: 419px;
+  height: 309px;
+}
+
+.red-stripe {
+  background-color: rgba(242, 56, 44, 1);
+}
+
+.blue-stripe {
+  background-color: rgba(18, 84, 141, 1);
+}
+
+.info-container {
+  margin-top: 91px;
+  margin-bottom: 91px;
+}
+
+h1 {
+  color: rgba(45, 104, 155, 1);
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 37px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1%;
+  text-align: justify;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  color: rgba(46, 2, 73, 0.3);
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  border: 2px solid rgba(46, 2, 73, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.button:hover {
+  background-color: rgba(45, 104, 155, 1);
+  border-color: rgba(45, 104, 155, 1);
+  color: rgba(238, 238, 238, 1);
+  cursor: pointer;
+  max-width: 526px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+input {
+  border: none;
+  border-bottom: 3px solid rgba(46, 2, 73, 0.3);
+  color: rgba(46, 2, 73, 0.3);
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 64px;
+  display: block;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(0, 71, 133, 1);
+  color: rgba(0, 71, 133, 1);
+}
+
+.send-button {
+  background-color: rgba(45, 104, 155, 1);
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px; 
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  color: rgba(238, 238, 238, 1);
+  font-size: 20;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.send-button-text {
+  margin: 0;
+}
+
+.send-button img {
+  margin: 0;
+  margin-right: 16px;
+}
+
+.contacts {
+  justify-content: center;
+  align-items: start;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: start;
+  font-size: 13px;
+}
+
+li:not(:last-child) {
+  margin-right: 51px;
+}
+
+.contacts p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.contacts a {
+  color: rgba(240, 24, 10, 1);
+}
+
+
+

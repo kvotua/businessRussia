@@ -1,22 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>businessRussia</title>
-    <link rel="stylesheet =" href="CSS/styles.css" />
-  </head>
-  <body
-    style="
-      background-image: url('images/background.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top;
-      background-attachment: fixed;
-    "
-  >
-  <div class="main">
-    <div class="rectangle"></div>
-  </div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bussinesRussia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="main-logo">
+                <img src="images/logo.png" alt="bussines Russia logo">
+            </div>
+
+            <div class="info-container">
+                <h1>Чем полезен портал Деловой России?</h1>
+                <p>Данный портал предназначен для предпринимателей оказавшихся в непростом положении. Сообщество Деловая Россия обладает большим административным ресурсом и готова протянуть руку помощи </p>
+            </div>
+
+            <div class="info-container">
+                <h1>Выберите к какому типу относится ваша проблема</h1>
+                <div class="main-content_buttons">
+                    <div class="button-row">
+                        <a class="button" href="">Юридическая</a>
+                        <a class="button" href="">Финансовая</a>
+                        <a class="button" href="">Персонал</a>
+                    </div>
+                    <div class="button-row">
+                        <a class="button" href="">Конкуренция</a>
+                        <a class="button" href="">Технологическая</a>
+                        <a class="button" href="">Другая</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h1>Заполните дополнительные поля</h1>
+                <div>
+                    <input type="text" class="input" value="Введите ваше имя">
+                    <input type="text" class="input" value="Номер телефона для связи">
+                    <input type="text" class="input" value="Выберите город">
+                    <input type="text" class="input" value="Сфера деятельности">
+                    <input type="text" class="input" value="Название организации">
+                    <input type="text" class="input" value="Коротко, но емко опишите вашу проблему ">
+                </div>
+            </div>
+
+            <div class="info-container">
+                <a href="" class="send-button">
+                    <img src="images/vector.png" alt="vector">
+                    <span  class="send-button-text">Отправить запрос</span>
+                </a>                   
+            </div>
+
+            <div class="info-container">
+                <div class="contacts">
+                    <ul>
+                        <li>
+                            <p>Телефон</p>
+                            <a href="tel:8-800-900-50-55">8-800-900-50-55</a>
+                        </li>
+                        <li>
+                            <p>Почта</p>
+                            <a href="mailto:help@dr.ru">help@dr.ru</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/vk_logo.png" alt="vk logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/telegram_logo.png" alt="telegram logo">
+                            </a>                               
+                        </li>
+                    </ul> 
+                </div>                                  
+            </div>
+        </div>
+
+        <div class="map">
+            <!--<div class="flag">
+                <div class="blue-stripe"></div>
+                <div class="red-stripe"></div>       
+            </div>-->
+            <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A45d8c60c08f3384b396bb05ed3dbafccf209aab859e96c623848991336f04977&amp;source=constructor" frameborder="0"></iframe>
+        </div>
+        <!-- <div class="main">
+            <div class="main-content">
+                <div class="main-logo">
+                    <a href="/">
+                        <img src="../images/logo.png" alt="bussines Russia logo">
+                    </a>              
+                </div>
+                
+                <div class="info-block">
+                    <h1>Чем полезен портал Деловой России?</h1>
+                    <p>Данный портал предназначен для предпринимателей оказавшихся в непростом положении. Сообщество Деловая Россия обладает большим административным ресурсом и готова протянуть руку помощи </p>
+                </div>
+
+                <div class="info-block">
+                    <h1>Выберите к какому типу относится ваша проблема</h1>
+                    <div class="main-content_buttons">
+                        <div class="button-row">
+                            <a class="button" href="">Юридическая</a>
+                            <a class="button" href="">Финансовая</a>
+                            <a class="button" href="">Персонал</a>
+                        </div>
+                        <div class="button-row">
+                            <a class="button" href="">Конкуренция</a>
+                            <a class="button" href="">Технологическая</a>
+                            <a class="button" href="">Другая</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <h1>Заполните дополнительные поля</h1>
+                    <div>
+                        <input type="text" class="input" value="Введите ваше имя">
+                        <input type="text" class="input" value="Номер телефона для связи">
+                        <input type="text" class="input" value="Выберите город">
+                        <input type="text" class="input" value="Сфера деятельности">
+                        <input type="text" class="input" value="Название организации">
+                        <input type="text" class="input" value="Коротко, но емко опишите вашу проблему ">
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <a href="" class="send-button">
+                        <img src="images/vector.png" alt="vector">
+                        <span  class="send-button-text">Отправить запрос</span>
+                    </a>                   
+                </div>
+
+                <div class="info-block">
+                    <div class="footer">
+                        <ul>
+                            <li>
+                                <p>Телефон</p>
+                                <a href="tel:8-800-900-50-55">8-800-900-50-55</a>
+                            </li>
+                            <li>
+                                <p>Почта</p>
+                                <a href="mailto:help@dr.ru">help@dr.ru</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/vk_logo.png" alt="vk logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/telegram_logo.png" alt="telegram logo">
+                                </a>                               
+                            </li>
+                        </ul> 
+                    </div>                                  
+                </div>
+            </div>
+
+            <div class="map">
+                <img src="images/map.png" alt="">
+            </div>
+        </div> -->
+    </div>
+</body>
 </html>
