@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400500&display=swap');
 
-body, html {
+body {
   position: fixed;
-  padding: 162px 308px;
+  padding: 25% 15%;
   inset: 0;
   background-image: url("images/background.png");
   align-items: center;
@@ -16,40 +16,25 @@ body, html {
   font-family: "Montserrat", sans-serif;
 }
 
-@media (max-width: 700px) {
-  body {
-    padding: 0;
-    background-color: transparent;
-    background-image: none;
-  }
-
-  .container {
-    display: none;
-    height: 100vh;
-    width: 100vw; 
-    margin: 0%;
-  }
-}
-
 .container {
-  width: 60vw;
-  height: 70vh;
-  min-width: 710px;
+  width: 65vw;
+  height: 75vh;
   background-color: white;
   border-radius: 50px;
   display: flex;
+  position: relative;
+  padding-inline: 6%;
 }
 
 .form, .map {
   flex: 1;
+  width: 50%;
 }
 
 .form {
-  margin-top: 91px;
-  min-width: 530px;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
-  margin-left: 91px;
 }
 
 .form::-webkit-scrollbar { 
@@ -62,36 +47,43 @@ body, html {
 }
 
 .map {
-  padding-top: 51px;
-  padding-bottom: 42px;
-  justify-content: center;
+  padding-block: 4%;
   display: flex;
-  padding-left: 91px;
-  padding-right: 91px;
+  position: relative;
+  z-index: 2;
 }
 
 iframe {
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
-.flag div {
-  width: 419px;
-  height: 309px;
+.flag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 66%;
+  z-index: 1;
 }
 
 .red-stripe {
+  width: 100%;
+  height: 50%;
   background-color: rgba(242, 56, 44, 1);
+  border-radius: 0 0 50px 0;
 }
 
 .blue-stripe {
+  width: 100%;
+  height: 50%;
   background-color: rgba(18, 84, 141, 1);
 }
 
 .info-container {
-  width: 100%;
-  margin-top: 91px;
-  margin-bottom: 91px;
+  width: calc(100% - 15%);
+  margin-block: 10%;
 }
 
 h1 {
@@ -115,31 +107,36 @@ a {
   text-decoration: none;
 }
 
-.button {
+.type-button {
   color: rgba(46, 2, 73, 0.3);
   font-size: 20px;
   font-weight: 500;
   background-color: white;
   border: 2px solid rgba(46, 2, 73, 0.3);
   border-radius: 8px;
-  padding: 16px;
+  padding-inline: 12px;
+  padding-block: 16px;
 }
 
-.button:hover {
+.type-button:hover, input[type="radio"]:checked + label {
   background-color: rgba(45, 104, 155, 1);
   border-color: rgba(45, 104, 155, 1);
   color: rgba(238, 238, 238, 1);
   cursor: pointer;
-  max-width: 526px;
 }
 
-.button-row {
+input[type="radio"] {
+  display: none;
+}
+
+.main-content_buttons {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
 }
 
-input {
+.input {
   border: none;
   border-bottom: 3px solid rgba(46, 2, 73, 0.3);
   color: rgba(46, 2, 73, 0.3);
@@ -150,10 +147,18 @@ input {
   width: 100%;
 }
 
-input:focus {
+.input::placeholder {
+  color: currentColor;
+}
+
+.input:focus {
   outline: none;
   border-color: rgba(0, 71, 133, 1);
   color: rgba(0, 71, 133, 1);
+}
+
+input:focus::placeholder {
+  color: currentColor;
 }
 
 .send-button {
@@ -169,9 +174,14 @@ input:focus {
   cursor: pointer;
   display: flex;
   color: rgba(238, 238, 238, 1);
-  font-size: 20;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  margin-top: 91px;
+}
+
+.send-button:hover {
+  cursor: pointer;
 }
 
 .send-button-text {
@@ -180,7 +190,7 @@ input:focus {
 
 .send-button img {
   margin: 0;
-  margin-right: 16px;
+  margin-right: 32px;
 }
 
 .contacts {
@@ -193,12 +203,10 @@ ul {
   list-style-type: none;
   padding-left: 0;
   display: flex;
-  align-items: start;
+  justify-content: space-between;
+  column-gap: 51px;
   font-size: 13px;
-}
-
-li:not(:last-child) {
-  margin-right: 51px;
+  margin-block: 0;
 }
 
 .contacts p {
@@ -210,5 +218,34 @@ li:not(:last-child) {
   color: rgba(240, 24, 10, 1);
 }
 
+@media (max-width: 1000px) {
+  body {
+    padding: 0;
+    background-image: none;
+    align-items: start;
+  }
 
+  .container {
+    overflow-y: auto;
+    height: 100vh;
+    width: 100vw; 
+  }
+
+  .info-container, .main-logo, .main-logo img {
+    width: 100%;
+  }
+
+  .form {
+    padding: 0;
+    margin: 0;
+  }
+
+  .map {
+    display: none;
+  }
+
+  .flag {
+    display: none;
+  }
+}
 

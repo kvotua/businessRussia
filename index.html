@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bussinesRussia</title>
+    <title>businessRussia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="form">
-            <div class="main-logo">
-                <img src="images/logo.png" alt="bussines Russia logo">
+        <form class="form">
+            <div class="info-container">
+                <div class="main-logo">
+                    <img src="images/logo.png" alt="business Russia logo">
+                </div>
             </div>
 
             <div class="info-container">
@@ -21,36 +23,39 @@
             <div class="info-container">
                 <h1>Выберите к какому типу относится ваша проблема</h1>
                 <div class="main-content_buttons">
-                    <div class="button-row">
-                        <a class="button" href="">Юридическая</a>
-                        <a class="button" href="">Финансовая</a>
-                        <a class="button" href="">Персонал</a>
-                    </div>
-                    <div class="button-row">
-                        <a class="button" href="">Конкуренция</a>
-                        <a class="button" href="">Технологическая</a>
-                        <a class="button" href="">Другая</a>
-                    </div>
+                  
+                        <input name="type-problem" class="type-button" type="radio" id="option1" value="Юридическая" required>
+                        <label class="type-button" for="option1">Юридическая</label>
+                        <input name="type-problem" class="type-button" type="radio" id="option2" value="Финансовая">
+                        <label class="type-button" for="option2">Финансовая</label>
+                        <input name="type-problem" class="type-button" type="radio" id="option3" value="Персонал">
+                        <label class="type-button" for="option3">Персонал</label>
+                  
+                   
+                        <input name="type-problem" class="type-button" type="radio" id="option4" value="Конкуренция">
+                        <label class="type-button" for="option4">Конкуренция</label>
+                        <input name="type-problem" class="type-button" type="radio" id="option5" value="Технологическая">
+                        <label class="type-button" for="option5">Технологическая</label>
+                        <input name="type-problem" class="type-button" type="radio" id="option6" value="Другая">
+                        <label class="type-button" for="option6">Другая</label>
+                
                 </div>
             </div>
 
             <div class="info-container">
                 <h1>Заполните дополнительные поля</h1>
-                <div>
-                    <input type="text" class="input" value="Введите ваше имя">
-                    <input type="text" class="input" value="Номер телефона для связи">
-                    <input type="text" class="input" value="Выберите город">
-                    <input type="text" class="input" value="Сфера деятельности">
-                    <input type="text" class="input" value="Название организации">
-                    <input type="text" class="input" value="Коротко, но емко опишите вашу проблему ">
-                </div>
-            </div>
 
-            <div class="info-container">
-                <a href="" class="send-button">
+                <input id="name" type="text" class="input" placeholder="Введите ваше имя" required>
+                <input id="phone" type="tel" class="input" placeholder="Номер телефона для связи" required>
+                <input id="city" type="text" class="input" placeholder="Выберите город" required>
+                <input id="activity" type="text" class="input" placeholder="Сфера деятельности" required>
+                <input id="organization" type="text" class="input" placeholder="Название организации" required>
+                <input id="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
+            
+                <button class="send-button" type="submit">
                     <img src="images/vector.png" alt="vector">
                     <span  class="send-button-text">Отправить запрос</span>
-                </a>                   
+                </button>   
             </div>
 
             <div class="info-container">
@@ -58,7 +63,7 @@
                     <ul>
                         <li>
                             <p>Телефон</p>
-                            <a href="tel:8-800-900-50-55">8-800-900-50-55</a>
+                            <a href="tel:88009005055">8-800-900-50-55</a>
                         </li>
                         <li>
                             <p>Почта</p>
@@ -77,14 +82,15 @@
                     </ul> 
                 </div>                                  
             </div>
-        </div>
+        </form>
 
         <div class="map">
-            <!--<div class="flag">
-                <div class="blue-stripe"></div>
-                <div class="red-stripe"></div>       
-            </div>-->
-            <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A45d8c60c08f3384b396bb05ed3dbafccf209aab859e96c623848991336f04977&amp;source=constructor" frameborder="0"></iframe>
+            <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A45d8c60c08f3384b396bb05ed3dbafccf209aab859e96c623848991336f04977&amp;source=constructor"></iframe>
+        </div>
+
+        <div class="flag">
+            <div class="blue-stripe"></div>
+            <div class="red-stripe"></div>       
         </div>
     </div>
 </body>
