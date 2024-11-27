@@ -22,7 +22,7 @@
 
             <div class="info-container">
                 <h1>Выберите к какому типу относится ваша проблема</h1>
-                <div class="main-content_buttons">
+                <div class="type-buttons-container">
                   
                         <input name="type-problem" class="type-button" type="radio" id="option1" value="Юридическая" required>
                         <label class="type-button" for="option1">Юридическая</label>
@@ -51,7 +51,9 @@
                 <input id="activity" type="text" class="input" placeholder="Сфера деятельности" required>
                 <input id="organization" type="text" class="input" placeholder="Название организации" required>
                 <input id="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
-            
+            </div>
+
+            <div class="info-container">
                 <button class="send-button" type="submit">
                     <img src="images/vector.png" alt="vector">
                     <span  class="send-button-text">Отправить запрос</span>
@@ -61,11 +63,11 @@
             <div class="info-container">
                 <div class="contacts">
                     <ul>
-                        <li>
+                        <li class="contact">
                             <p>Телефон</p>
                             <a href="tel:88009005055">8-800-900-50-55</a>
                         </li>
-                        <li>
+                        <li class="contact">
                             <p>Почта</p>
                             <a href="mailto:help@dr.ru">help@dr.ru</a>
                         </li>

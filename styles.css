@@ -23,7 +23,7 @@ body {
   border-radius: 50px;
   display: flex;
   position: relative;
-  padding-inline: 6%;
+  padding-inline: 4vw;
 }
 
 .form, .map {
@@ -61,7 +61,7 @@ iframe {
 
 .flag {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   width: 25%;
   height: 66%;
@@ -82,40 +82,50 @@ iframe {
 }
 
 .info-container {
-  width: calc(100% - 15%);
-  margin-block: 10%;
+  width: calc(100% - 4vw);
+  margin-block: 4vw;
 }
 
 h1 {
   color: rgba(45, 104, 155, 1);
-  font-size: 30px;
+  font-size: 1.6vw;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 24px;
-  line-height: 37px;
+  line-height: 1.2;
 }
 
 p {
-  font-size: 14px;
+  font-size: 0.8vw;
   font-weight: 300;
   letter-spacing: 1%;
   text-align: justify;
-  line-height: 24px;
+  line-height: 1.7;
 }
 
 a {
   text-decoration: none;
 }
 
+.type-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.8vw;
+  row-gap: 0.8vw;
+}
+
+.type-button, .input, .send-button {
+  font-size: 1vw;
+}
+
+
 .type-button {
   color: rgba(46, 2, 73, 0.3);
-  font-size: 20px;
   font-weight: 500;
   background-color: white;
   border: 2px solid rgba(46, 2, 73, 0.3);
-  border-radius: 8px;
-  padding-inline: 12px;
-  padding-block: 16px;
+  border-radius: 0.4vw;
+  padding-inline: 0.6vw;
+  padding-block: 0.8vw;
 }
 
 .type-button:hover, input[type="radio"]:checked + label {
@@ -129,22 +139,18 @@ input[type="radio"] {
   display: none;
 }
 
-.main-content_buttons {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 16px;
-  row-gap: 16px;
-}
-
 .input {
   border: none;
   border-bottom: 3px solid rgba(46, 2, 73, 0.3);
   color: rgba(46, 2, 73, 0.3);
   font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 64px;
   display: block;
   width: 100%;
+  background-color: transparent;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 10%;
 }
 
 .input::placeholder {
@@ -164,20 +170,14 @@ input:focus::placeholder {
 .send-button {
   background-color: rgba(45, 104, 155, 1);
   width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px; 
+  padding-block: 1.2vw;
   text-align: center;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 0.8vw;
   cursor: pointer;
   display: flex;
-  color: rgba(238, 238, 238, 1);
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-top: 91px;
 }
 
 .send-button:hover {
@@ -186,36 +186,45 @@ input:focus::placeholder {
 
 .send-button-text {
   margin: 0;
+  color: rgba(238, 238, 238, 1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
 }
 
 .send-button img {
   margin: 0;
-  margin-right: 32px;
-}
-
-.contacts {
-  justify-content: center;
-  align-items: start;
-  display: flex;
+  margin-right: 1.6vw;
+  width: 1vw;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
   display: flex;
-  justify-content: space-between;
-  column-gap: 51px;
-  font-size: 13px;
+  justify-content: center;
+  column-gap: 10%;
   margin-block: 0;
 }
 
 .contacts p {
+  font-size: 0.6vw;
   margin: 0;
   font-weight: 600;
 }
 
 .contacts a {
+  font-size: 0.6vw;
+  font-weight: 400;
   color: rgba(240, 24, 10, 1);
+}
+
+.contacts img {
+  width: 2vw;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1000px) {
@@ -231,7 +240,7 @@ ul {
     width: 100vw; 
   }
 
-  .info-container, .main-logo, .main-logo img {
+  .info-container {
     width: 100%;
   }
 
@@ -247,5 +256,81 @@ ul {
   .flag {
     display: none;
   }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+
+  .type-button, .input, .send-button {
+    font-size: 3.5vw;
+  }
+
+  .contacts p, .contacts a {
+    font-size: 2.5vw;
+    margin: 0;
+  }
+
+  .contacts img {
+    width: 5vw;
+  }
+
+  .send-button {
+    border-radius: 2.4vw;
+  }
+
+  .type-button {
+    border-radius: 1.2vw;
+  }
+
+  .type-buttons-container {
+    row-gap: 2vw;
+    column-gap: 2vw;
+  }
+
+  .type-button {
+    padding-block: 2vw;
+    padding-inline: 1.5vw;
+  }
+
+  .send-button {
+    padding-block: 3vw;
+  }
+
+  .send-button img {
+    width: 3vw;
+  }
+
+  .info-container {
+    margin-block: 12vw;
+  }
+
+  /*
+
+  
+
+  .contacts, a {
+    font-size: 9px;
+  } 
+
+  .contacts img {
+    width: 70%;
+  }
+
+  .type-button, .send-button {
+    font-size: 15px;
+  }
+
+  .type-button {
+    padding-inline: 8px;
+    padding-block: 10px;
+  }
+
+  .input::placeholder {
+    font-size: 14px;
+  } */
 }
 
