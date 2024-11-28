@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400500&display=swap");
 
 body {
+  margin: 0;
   position: fixed;
-  padding: 25% 15%;
   inset: 0;
   background-image: url("images/background.png");
   align-items: center;
@@ -17,6 +17,7 @@ body {
 }
 
 .container {
+  margin: 0;
   width: 65vw;
   height: 75vh;
   background-color: white;
@@ -36,6 +37,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
+  padding-block: 4vw;
 }
 
 .form::-webkit-scrollbar {
