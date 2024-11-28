@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400500&display=swap");
 
 body {
   position: fixed;
@@ -26,7 +26,8 @@ body {
   padding-inline: 4vw;
 }
 
-.form, .map {
+.form,
+.map {
   flex: 1;
   width: 50%;
 }
@@ -37,7 +38,7 @@ body {
   scrollbar-width: none;
 }
 
-.form::-webkit-scrollbar { 
+.form::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
@@ -83,7 +84,10 @@ iframe {
 
 .info-container {
   width: calc(100% - 4vw);
-  margin-block: 4vw;
+}
+
+.info-container:not(:last-child) {
+  margin-bottom: 4vw;
 }
 
 h1 {
@@ -113,10 +117,11 @@ a {
   row-gap: 0.8vw;
 }
 
-.type-button, .input, .send-button {
+.type-button,
+.input,
+.send-button {
   font-size: 1vw;
 }
-
 
 .type-button {
   color: rgba(46, 2, 73, 0.3);
@@ -128,7 +133,8 @@ a {
   padding-block: 0.8vw;
 }
 
-.type-button:hover, input[type="radio"]:checked + label {
+.type-button:hover,
+input[type="radio"]:checked + label {
   background-color: rgba(45, 104, 155, 1);
   border-color: rgba(45, 104, 155, 1);
   color: rgba(238, 238, 238, 1);
@@ -229,15 +235,19 @@ ul {
 
 @media (max-width: 1000px) {
   body {
-    padding: 0;
+    padding: 4%;
     background-image: none;
+    background-color: #f5f5f5;
     align-items: start;
+    margin: 0;
   }
 
   .container {
+    padding: 0;
+    border-radius: 25px;
     overflow-y: auto;
-    height: 100vh;
-    width: 100vw; 
+    height: 100%;
+    width: 100%;
   }
 
   .info-container {
@@ -245,7 +255,7 @@ ul {
   }
 
   .form {
-    padding: 0;
+    padding: 12%;
     margin: 0;
   }
 
@@ -258,18 +268,21 @@ ul {
   }
 
   h1 {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   p {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 
-  .type-button, .input, .send-button {
-    font-size: 3.5vw;
+  .type-button,
+  .input,
+  .send-button {
+    font-size: 3.2vw;
   }
 
-  .contacts p, .contacts a {
+  .contacts p,
+  .contacts a {
     font-size: 2.5vw;
     margin: 0;
   }
@@ -292,8 +305,9 @@ ul {
   }
 
   .type-button {
-    padding-block: 2vw;
-    padding-inline: 1.5vw;
+    padding-block: 2.3vw;
+    padding-inline: 1.2vw;
+    border-width: 1px;
   }
 
   .send-button {
@@ -304,8 +318,8 @@ ul {
     width: 3vw;
   }
 
-  .info-container {
-    margin-block: 12vw;
+  .info-container:not(:last-child) {
+    margin-bottom: 12vw;
   }
 
   /*
@@ -333,4 +347,3 @@ ul {
     font-size: 14px;
   } */
 }
-
