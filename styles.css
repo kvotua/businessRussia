@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   margin: 0;
@@ -94,7 +94,7 @@ iframe {
 
 h1 {
   color: rgba(45, 104, 155, 1);
-  font-size: 1.6vw;
+  font-size: 1.7vw;
   font-weight: 600;
   margin-top: 0;
   line-height: 1.2;
@@ -115,57 +115,54 @@ a {
 .type-buttons-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 0.8vw;
-  row-gap: 0.8vw;
+  column-gap: 0.85vw;
+  row-gap: 0.85vw;
 }
 
 .type-button,
 .input,
 .send-button {
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 .type-button {
   color: rgba(46, 2, 73, 0.3);
-  font-weight: 500;
+  font-weight: medium;
+  font-family: 'Poppins', sans-serif;
   background-color: white;
   border: 2px solid rgba(46, 2, 73, 0.3);
-  border-radius: 0.4vw;
-  padding-inline: 0.6vw;
-  padding-block: 0.8vw;
+  border-width: 0.155vw;
+  border-radius: 0.425vw;
+  padding-block: 0.75vw;
+  padding-inline: 0.9vw;
 }
 
 .type-button:hover,
-input[type="radio"]:checked + label {
+.type-button:checked {
   background-color: rgba(45, 104, 155, 1);
   border-color: rgba(45, 104, 155, 1);
   color: rgba(238, 238, 238, 1);
-  cursor: pointer;
 }
 
-input[type="radio"] {
-  display: none;
-}
 
-.input {
+input {
   border: none;
   border-bottom: 3px solid rgba(46, 2, 73, 0.3);
   color: rgba(46, 2, 73, 0.3);
   font-weight: 500;
-  display: block;
   width: 100%;
   background-color: transparent;
 }
 
-.input:not(:last-child) {
-  margin-bottom: 10%;
+input:not(:last-child) {
+  margin-bottom: 3.8vw;
 }
 
-.input::placeholder {
+input::placeholder {
   color: currentColor;
 }
 
-.input:focus {
+input:focus {
   outline: none;
   border-color: rgba(0, 71, 133, 1);
   color: rgba(0, 71, 133, 1);
@@ -178,12 +175,12 @@ input:focus::placeholder {
 .send-button {
   background-color: rgba(45, 104, 155, 1);
   width: 100%;
-  padding-block: 1.2vw;
+  padding-block: 1.36vw;
   text-align: center;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 0.8vw;
+  border-radius: 0.85vw;
   cursor: pointer;
   display: flex;
 }
@@ -192,17 +189,17 @@ input:focus::placeholder {
   cursor: pointer;
 }
 
-.send-button-text {
+span {
   margin: 0;
   color: rgba(238, 238, 238, 1);
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-weight: 500;
 }
 
-.send-button img {
+.send-button svg {
   margin: 0;
-  margin-right: 1.6vw;
-  width: 1vw;
+  margin-right: 9%;
+  width: 1.4vw;
 }
 
 ul {
@@ -215,13 +212,13 @@ ul {
 }
 
 .contacts p {
-  font-size: 0.6vw;
+  font-size: 0.74vw;
   margin: 0;
   font-weight: 600;
 }
 
 .contacts a {
-  font-size: 0.6vw;
+  font-size: 0.74vw;
   font-weight: 400;
   color: rgba(240, 24, 10, 1);
 }
@@ -270,22 +267,22 @@ ul {
   }
 
   h1 {
-    font-size: 4vw;
+    font-size: 4.1vw;
   }
 
   p {
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
 
   .type-button,
   .input,
   .send-button {
-    font-size: 3.2vw;
+    font-size: 2.73vw;
   }
 
   .contacts p,
   .contacts a {
-    font-size: 2.5vw;
+    font-size: 1.78vw;
     margin: 0;
   }
 
@@ -294,29 +291,27 @@ ul {
   }
 
   .send-button {
-    border-radius: 2.4vw;
-  }
-
-  .type-button {
-    border-radius: 1.2vw;
+    border-radius: 2.18vw;
+    padding-block: 3.28vw;
   }
 
   .type-buttons-container {
-    row-gap: 2vw;
-    column-gap: 2vw;
+    row-gap: 2.18vw;
+    column-gap: 2.18vw;
   }
 
   .type-button {
-    padding-block: 2.3vw;
-    padding-inline: 1.2vw;
-    border-width: 1px;
+    border-radius: 1.09vw;
+    padding-block: 2.18vw;
+    padding-inline: 2.5vw;
+    border-width: 0.4vw;
   }
 
   .send-button {
-    padding-block: 3vw;
+    padding-block: 3.2vw;
   }
 
-  .send-button img {
+  .send-button svg {
     width: 3vw;
   }
 
@@ -324,28 +319,4 @@ ul {
     margin-bottom: 12vw;
   }
 
-  /*
-
-  
-
-  .contacts, a {
-    font-size: 9px;
-  } 
-
-  .contacts img {
-    width: 70%;
-  }
-
-  .type-button, .send-button {
-    font-size: 15px;
-  }
-
-  .type-button {
-    padding-inline: 8px;
-    padding-block: 10px;
-  }
-
-  .input::placeholder {
-    font-size: 14px;
-  } */
 }
