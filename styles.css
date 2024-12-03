@@ -121,7 +121,8 @@ a {
 
 .type-button,
 .input,
-.send-button {
+.send-button,
+select {
   font-size: 1.2vw;
 }
 
@@ -145,7 +146,7 @@ a {
 }
 
 
-input {
+input, select {
   border: none;
   border-bottom: 3px solid rgba(46, 2, 73, 0.3);
   color: rgba(46, 2, 73, 0.3);
@@ -154,7 +155,7 @@ input {
   background-color: transparent;
 }
 
-input:not(:last-child) {
+select, input:not(:last-child) {
   margin-bottom: 3.8vw;
 }
 
@@ -162,7 +163,7 @@ input::placeholder {
   color: currentColor;
 }
 
-input:focus {
+select:focus, input:focus {
   outline: none;
   border-color: rgba(0, 71, 133, 1);
   color: rgba(0, 71, 133, 1);
