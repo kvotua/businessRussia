@@ -1,29 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Путь к файлу CSV
-    const csvFile = 'cities.csv';
+    const csvFile = './bd/cities.csv';
 
-    // Получаем элемент <select> по его id
-    const select = document.getElementById('cities');
+    const dropdown = document.querySelector('.custom-dropdown');
+    const arrow = dropdown.querySelector('.arrow');
+    const selectedOption = dropdown.querySelector('.selected-option');
+    const optionsList = dropdown.querySelector('.options-list');
 
-    // Функция для чтения CSV файла
     function readCSV(filePath) {
         fetch(filePath)
             .then(response => response.text())
             .then(data => {
-                // Разделяем строки по переносу строки
                 const rows = data.split('\n');
 
-                // Создаем элементы <option> для каждого города
                 rows.forEach(row => {
-                    const option = document.createElement('option');
-                    option.value = row.split(';')[0];
-                    option.text = row.split(';')[0];
-                    select.appendChild(option);
+                    const city = row.split(';')[0];
+                    const li = document.createElement('li');
+                    li.innerHTML = `<img src="./images/location_mark.png" alt="Location Icon" class="location-icon">${city}`;
+                    li.addEventListener('click', function() {
+                        selectedOption.querySelector('.selected-text').textContent = city;
+                        dropdown.classList.remove('open');
+                    });
+                    optionsList.appendChild(li);
                 });
             })
             .catch(error => console.error('Ошибка чтения CSV файла:', error));
     }
 
-    // Вызываем функцию чтения CSV файла
     readCSV(csvFile);
+
+    selectedOption.addEventListener('click', function() {
+        dropdown.classList.toggle('open');
+        dropdown.style.color = 'rgba(0, 71, 133, 1)';
+        dropdown.style.borderColor = 'rgba(0, 71, 133, 1)';
+        //arrow.src = "./images/arrow_up.png"
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('open');
+            dropdown.style.color = 'rgba(46, 2, 73, 0.3)';
+            dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
+            //arrow.src = "./images/arrow.png";          
+        }
+
+        // if (optionsList.style.display == "none")
+        //     arrow.src = "./images/arrow.png";            
+        // else  
+        //     arrow.src = "./images/arrow_up.png"
+    });
 });

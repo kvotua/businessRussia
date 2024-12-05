@@ -38,9 +38,16 @@
 
                 <input id="name" type="text" class="input" placeholder="Введите ваше имя" required>
                 <input id="phone" type="tel" class="input" placeholder="Номер телефона для связи" required>
-                <select name="cities" id="cities" required>
-                    <option value="" disabled selected>Выберите город</option>
-                </select>
+
+                <div class="custom-dropdown">
+                    <div class="selected-option">
+                        <span class="selected-text">Выберите город</span>
+                        <img class="arrow" src="./images/arrow.png">
+                    </div>
+                    <ul class="options-list">
+                    </ul>
+                </div>
+
                 <input id="activity" type="text" class="input" placeholder="Сфера деятельности" required>
                 <input id="organization" type="text" class="input" placeholder="Название организации" required>
                 <input id="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
@@ -90,6 +97,7 @@
             <div class="red-stripe"></div>       
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
