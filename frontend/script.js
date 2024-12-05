@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     li.addEventListener('click', function() {
                         selectedOption.querySelector('.selected-text').textContent = city;
                         dropdown.classList.remove('open');
+                        arrow.src = "./images/arrow_down.png";
+                        selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
+                        dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
                     });
                     optionsList.appendChild(li);
                 });
@@ -30,22 +33,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     selectedOption.addEventListener('click', function() {
         dropdown.classList.toggle('open');
-        dropdown.style.color = 'rgba(0, 71, 133, 1)';
+        selectedOption.style.color = 'rgba(0, 71, 133, 1)';
         dropdown.style.borderColor = 'rgba(0, 71, 133, 1)';
-        //arrow.src = "./images/arrow_up.png"
+
+        if (!dropdown.classList.contains('open')) {
+            arrow.src = "./images/arrow_down.png";
+            selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
+            dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
+        }
+        else arrow.src = "./images/arrow_up.png";
+        
     });
 
     document.addEventListener('click', function(event) {
         if (!dropdown.contains(event.target)) {
             dropdown.classList.remove('open');
-            dropdown.style.color = 'rgba(46, 2, 73, 0.3)';
+            selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
             dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
-            //arrow.src = "./images/arrow.png";          
+            arrow.src = "./images/arrow_down.png";          
         }
-
-        // if (optionsList.style.display == "none")
-        //     arrow.src = "./images/arrow.png";            
-        // else  
-        //     arrow.src = "./images/arrow_up.png"
     });
 });
