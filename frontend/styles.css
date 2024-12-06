@@ -120,7 +120,7 @@ a {
 }
 
 .type-button,
-.input,
+input,
 .send-button,
 .custom-dropdown {
   font-size: 1.2vw;
@@ -238,40 +238,23 @@ ul {
 .custom-dropdown {
   position: relative;
   width: 100%;
-  border-bottom: 3px solid rgba(46, 2, 73, 0.3);
   color: rgba(46, 2, 73, 0.3);
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 3.8vw;
-}
-
-.custom-dropdown .selected-option {
-  display: flex;
-  justify-content:space-between;
-  align-items: end;
-}
-
-.custom-dropdown .selected-option img {
-  margin-bottom: 0.5vw;
-  margin-right: 0.5vw;
-  height: 0.5vw;
-}
+}  
 
 .custom-dropdown .options-list {
   display: none;
-  border-radius: 0.425vw;
   position: absolute;
-  top: 100%;
+  top: 40%;
   left: 0;
   width: 100%;
   background-color: white;
-  border: 3px solid rgba(46, 2, 73, 0.3);
   max-height: 25vw;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
 
-  margin-top: 0.8vw;
   z-index: 10;
 }
 
@@ -287,8 +270,30 @@ ul {
   margin-right: 0.5vw;
 }
 
-.custom-dropdown.open .options-list {
-  display: block;
+.selected-option, .options-list {
+  border-radius: 0.425vw;
+  border: 3px solid rgba(46, 2, 73, 0.3);
+} 
+
+/* .selected-option {
+  padding-block: 0.75vw;
+} */
+
+.custom-dropdown .arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.6em;
+  margin-right: 0.3em;
+  width: 0.7vw;
+  z-index: 0;
+}
+
+.custom-dropdown .selected-option:focus + .arrow path {
+  stroke: rgba(0, 71, 133, 1);
+  stroke-opacity: 1;
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 
 @media (max-width: 1000px) {
@@ -334,19 +339,33 @@ ul {
   }
 
   .type-button,
-  .input,
+  input,
   .send-button,
   .custom-dropdown {
     font-size: 2.73vw;
   }
 
-  .input, 
-  .custom-dropdown {
-    border-bottom-width: 2px;
-  }
-
+  input, 
+  .custom-dropdown .selected-option,
   .custom-dropdown .options-list {
     border-width: 2px;
+  }
+
+  .custom-dropdown .selected-option,
+  .custom-dropdown .options-list {
+    border-radius: 1.09vw;
+  }
+
+  input:not(:last-child) {
+    margin-bottom: 8vw;
+  }
+
+  .custom-dropdown .arrow {
+    width: 0.7em;
+  }
+
+  .custom-dropdown .options-list li .location-icon {
+    width: 3.2vw;
   }
 
   .contacts p,
@@ -371,7 +390,7 @@ ul {
 
   .type-button {
     border-radius: 1.09vw;
-    padding-block: 2.18vw;
+    padding-block: 1.5vw;
     padding-inline: 2.5vw;
     border-width: 0.4vw;
   }
@@ -385,7 +404,7 @@ ul {
   }
 
   .info-container:not(:last-child) {
-    margin-bottom: 12vw;
+    margin-bottom: 10vw;
   }
 
 }

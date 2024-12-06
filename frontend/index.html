@@ -28,8 +28,7 @@
                         <button class="type-button" type="button">Персонал</button>
                         <button class="type-button" type="button">Конкуренция</button>
                         <button class="type-button" type="button">Технологическая</button>
-                        <button class="type-button" type="button">Другая</button>
-                
+                        <button class="type-button" type="button">Другая</button>                
                 </div>
             </div>
 
@@ -40,10 +39,11 @@
                 <input id="phone" type="tel" class="input" placeholder="Номер телефона для связи" required>
 
                 <div class="custom-dropdown">
-                    <div class="selected-option">
-                        <span class="selected-text">Выберите город</span>
-                        <img class="arrow" src="./images/arrow_down.png">
-                    </div>
+                    <input type="text" class="selected-option" placeholder="Выберите город" required>
+                    <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1L5 5L1 1" stroke="#2E0249" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                        
                     <ul class="options-list">
                     </ul>
                 </div>

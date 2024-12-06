@@ -5,52 +5,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrow = dropdown.querySelector('.arrow');
     const selectedOption = dropdown.querySelector('.selected-option');
     const optionsList = dropdown.querySelector('.options-list');
+    let cities = [];
 
     function readCSV(filePath) {
         fetch(filePath)
             .then(response => response.text())
             .then(data => {
                 const rows = data.split('\n');
-
-                rows.forEach(row => {
-                    const city = row.split(';')[0];
-                    const li = document.createElement('li');
-                    li.innerHTML = `<img src="./images/location_mark.png" alt="Location Icon" class="location-icon">${city}`;
-                    li.addEventListener('click', function() {
-                        selectedOption.querySelector('.selected-text').textContent = city;
-                        dropdown.classList.remove('open');
-                        arrow.src = "./images/arrow_down.png";
-                        selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
-                        dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
-                    });
-                    optionsList.appendChild(li);
-                });
+                cities = rows.map(row => row.split(';')[0]);
+                renderOptions(cities);
             })
             .catch(error => console.error('Ошибка чтения CSV файла:', error));
     }
 
+    function renderOptions(filteredCities) {
+        optionsList.innerHTML = '';
+        filteredCities.forEach(city => {
+            const li = document.createElement('li');
+            li.innerHTML = `<img src="./images/location_mark.png" alt="Location Icon" class="location-icon">${city}`;
+            li.addEventListener('click', function() {
+                selectedOption.value = city;
+                optionsList.style.display = 'none'
+            });
+            optionsList.appendChild(li);
+        });
+    }
+
     readCSV(csvFile);
 
-    selectedOption.addEventListener('click', function() {
-        dropdown.classList.toggle('open');
-        selectedOption.style.color = 'rgba(0, 71, 133, 1)';
-        dropdown.style.borderColor = 'rgba(0, 71, 133, 1)';
+    selectedOption.addEventListener('focus', function() {
+        optionsList.style.display = 'block'
+    });
 
-        if (!dropdown.classList.contains('open')) {
-            arrow.src = "./images/arrow_down.png";
-            selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
-            dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
-        }
-        else arrow.src = "./images/arrow_up.png";
-        
+    selectedOption.addEventListener('input', function() {
+        const filter = selectedOption.value.toLowerCase();
+        const filteredCities = cities.filter(city => city.toLowerCase().startsWith(filter));
+        if (filteredCities.length > 0) {            
+            renderOptions(filteredCities);
+            optionsList.style.display = 'block'
+        } 
+        else optionsList.style.display = 'none'
     });
 
     document.addEventListener('click', function(event) {
         if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('open');
-            selectedOption.style.color = 'rgba(46, 2, 73, 0.3)';
-            dropdown.style.borderColor = 'rgba(46, 2, 73, 0.3)';
-            arrow.src = "./images/arrow_down.png";          
-        }
+            optionsList.style.display = 'none'
+        }       
     });
 });
