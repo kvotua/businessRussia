@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>businessRussia</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/frontend/styles.css">
 </head>
 <body>
     <div class="container">
         <form class="form">
             <div class="info-container">
                 <div class="main-logo">
-                    <img src="images/logo.png" alt="business Russia logo">
+                    <img src="/frontend/images/logo.png" alt="business Russia logo">
                 </div>
             </div>
 
@@ -29,17 +29,16 @@
                         <button class="type-button" type="button">Конкуренция</button>
                         <button class="type-button" type="button">Технологическая</button>
                         <button class="type-button" type="button">Другая</button>                
+                        <input type="hidden" name="types" id="selected-types" value="">
                 </div>
             </div>
 
             <div class="info-container">
                 <h1>Заполните дополнительные поля</h1>             
-
-                <input id="name" type="text" class="input" placeholder="Введите ваше имя" required>
-                <input id="phone" type="tel" class="input" placeholder="Номер телефона для связи" required>
-
+                <input name="name" type="text" class="input" placeholder="Введите ваше имя" required>
+                <input name="phone" class="input" placeholder="Номер телефона для связи" required>
                 <div class="custom-dropdown">
-                    <input type="text" class="selected-option" placeholder="Выберите город" required>
+                    <input name="city" type="text" class="selected-option" placeholder="Выберите город" autocomplete="off" required>
                     <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 1L5 5L1 1" stroke="#2E0249" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -47,10 +46,9 @@
                     <ul class="options-list">
                     </ul>
                 </div>
-
-                <input id="activity" type="text" class="input" placeholder="Сфера деятельности" required>
-                <input id="organization" type="text" class="input" placeholder="Название организации" required>
-                <input id="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
+                <input name="activity" type="text" class="input" placeholder="Сфера деятельности" required>
+                <input name="organization" type="text" class="input" placeholder="Название организации" required>
+                <input name="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
             </div>
 
             <div class="info-container">
@@ -66,8 +64,9 @@
                 <div class="contacts">
                     <ul>
                         <li class="contact">
-                            <p>Телефон</p>
-                            <a href="tel:88009005055">8-800-900-50-55</a>
+                            <p>Телефон</p>                            
+                            <a href="tel:74956491826">+7 (495) 649 18 26</a>
+                            <a href="tel:74956491827">+7 (495) 649 18 27</a>
                         </li>
                         <li class="contact">
                             <p>Почта</p>
@@ -75,12 +74,12 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/vk_logo.png" alt="vk logo">
+                                <img src="/frontend/images/vk_logo.png" alt="vk logo">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/telegram_logo.png" alt="telegram logo">
+                                <img src="/frontend/images/telegram_logo.png" alt="telegram logo">
                             </a>                               
                         </li>
                     </ul> 
@@ -89,7 +88,7 @@
         </form>
 
         <div class="map">
-            <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A45d8c60c08f3384b396bb05ed3dbafccf209aab859e96c623848991336f04977&amp;source=constructor"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1899799e42bbb4b98a3b11d2f3ef87cb84e4ed61e1918561cbe72df8653d4589&amp;source=constructor"></iframe>
         </div>
 
         <div class="flag">
@@ -98,6 +97,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/frontend/script.js"></script>
 </body>
 </html>

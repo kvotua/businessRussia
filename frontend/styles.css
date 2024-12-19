@@ -138,13 +138,11 @@ input,
   padding-inline: 0.9vw;
 }
 
-.type-button:hover,
-.type-button:checked {
+.button-selected {
   background-color: rgba(45, 104, 155, 1);
   border-color: rgba(45, 104, 155, 1);
   color: rgba(238, 238, 238, 1);
 }
-
 
 input {
   padding: 0;
@@ -241,6 +239,7 @@ ul {
   color: rgba(46, 2, 73, 0.3);
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
+  margin-top: 4px;
 }  
 
 .custom-dropdown .options-list {
@@ -270,7 +269,7 @@ ul {
   margin-right: 0.5vw;
 }
 
-.selected-option, .options-list {
+.options-list {
   border-radius: 0.425vw;
   border: 3px solid rgba(46, 2, 73, 0.3);
 } 
@@ -286,7 +285,7 @@ ul {
   margin-top: 0.6em;
   margin-right: 0.3em;
   width: 0.7vw;
-  z-index: 0;
+  pointer-events: none;
 }
 
 .custom-dropdown .selected-option:focus + .arrow path {
@@ -345,13 +344,16 @@ ul {
     font-size: 2.73vw;
   }
 
+input {
+  width: 100%;
+}
+
   input, 
   .custom-dropdown .selected-option,
   .custom-dropdown .options-list {
     border-width: 2px;
   }
 
-  .custom-dropdown .selected-option,
   .custom-dropdown .options-list {
     border-radius: 1.09vw;
   }

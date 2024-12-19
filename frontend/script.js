@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const csvFile = './bd/cities.csv';
+    const csvFile = '/frontend/bd/cities.csv';
 
     const dropdown = document.querySelector('.custom-dropdown');
     const arrow = dropdown.querySelector('.arrow');
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         optionsList.innerHTML = '';
         filteredCities.forEach(city => {
             const li = document.createElement('li');
-            li.innerHTML = `<img src="./images/location_mark.png" alt="Location Icon" class="location-icon">${city}`;
+            li.innerHTML = `<img src="/frontend/images/location_mark.png" alt="" class="location-icon">${city}`;
             li.addEventListener('click', function() {
                 selectedOption.value = city;
-                optionsList.style.display = 'none'
+                optionsList.style.display = 'none';
             });
             optionsList.appendChild(li);
         });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     readCSV(csvFile);
 
     selectedOption.addEventListener('focus', function() {
-        optionsList.style.display = 'block'
+        optionsList.style.display = 'block';
     });
 
     selectedOption.addEventListener('input', function() {
@@ -42,14 +42,37 @@ document.addEventListener('DOMContentLoaded', function() {
         const filteredCities = cities.filter(city => city.toLowerCase().startsWith(filter));
         if (filteredCities.length > 0) {            
             renderOptions(filteredCities);
-            optionsList.style.display = 'block'
-        } 
-        else optionsList.style.display = 'none'
+            optionsList.style.display = 'block';
+        } else {
+            optionsList.style.display = 'none';
+        }
     });
 
     document.addEventListener('click', function(event) {
         if (!dropdown.contains(event.target)) {
-            optionsList.style.display = 'none'
+            optionsList.style.display = 'none';
         }       
+    });
+
+
+    const buttons = document.querySelectorAll('.type-button');
+    let selectedCount = 0;
+    const selectedTypes = [];
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('button-selected')) {
+                button.classList.remove('button-selected');
+                selectedCount--;
+                selectedTypes.splice(selectedTypes.indexOf(button.textContent), 1); 
+            } else {
+                if (selectedCount < 3) {
+                    button.classList.add('button-selected');
+                    selectedCount++;
+                    selectedTypes.push(button.textContent); 
+                }
+            }
+            document.getElementById('selected-types').value = selectedTypes.join(',');             
+        });
     });
 });
