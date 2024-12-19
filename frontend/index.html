@@ -15,6 +15,12 @@
                 </div>
             </div>
 
+            <div class="success-message">
+                <p>Спасибо за обращение!</p>
+                <p>Наша команда скоро свяжется с Вами!</p>
+            </div>
+
+            <div class="main-content">
             <div class="info-container">
                 <h1>Чем полезен портал Деловой России?</h1>
                 <p>Данный портал предназначен для предпринимателей оказавшихся в непростом положении. Сообщество Деловая Россия обладает большим административным ресурсом и готова протянуть руку помощи </p>
@@ -29,14 +35,13 @@
                         <button class="type-button" type="button">Конкуренция</button>
                         <button class="type-button" type="button">Технологическая</button>
                         <button class="type-button" type="button">Другая</button>                
-                        <input type="hidden" name="types" id="selected-types" value="">
                 </div>
             </div>
 
             <div class="info-container">
                 <h1>Заполните дополнительные поля</h1>             
                 <input name="name" type="text" class="input" placeholder="Введите ваше имя" required>
-                <input name="phone" class="input" placeholder="Номер телефона для связи" required>
+                <input name="phone" id="phone" class="input" placeholder="Номер телефона для связи" required>
                 <div class="custom-dropdown">
                     <input name="city" type="text" class="selected-option" placeholder="Выберите город" autocomplete="off" required>
                     <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,6 +90,7 @@
                     </ul> 
                 </div>                                  
             </div>
+            </div>
         </form>
 
         <div class="map">
@@ -97,6 +103,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/inputmask/dist/inputmask.min.js"></script>
     <script src="/frontend/script.js"></script>
 </body>
 </html>

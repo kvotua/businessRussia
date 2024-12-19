@@ -1,15 +1,15 @@
 import httpx
 import os
-from backend.models.application_model import Application
+from backend.models.business_request_model import BusinessRequest
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='backend/.env')
 
-async def send_telegram(application: Application):
+async def send_telegram(business_request: BusinessRequest):
     url = f"https://api.telegram.org/bot{os.getenv('TELEGRAM_BOT_TOKEN')}/sendMessage"
     params = {
         "chat_id": "-1002431648433",
-        "text": application
+        "text": business_request
     }
 
     async with httpx.AsyncClient() as client:

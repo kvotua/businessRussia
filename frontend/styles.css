@@ -16,6 +16,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   margin: 0;
   width: 65vw;
@@ -92,12 +96,19 @@ iframe {
   margin-bottom: 4vw;
 }
 
-h1 {
+h1,
+.success-message {
   color: rgba(45, 104, 155, 1);
-  font-size: 1.7vw;
+  font-size: 1.6vw;
   font-weight: 600;
   margin-top: 0;
   line-height: 1.2;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {

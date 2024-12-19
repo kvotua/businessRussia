@@ -1,27 +1,15 @@
-from fastapi import FastAPI, Form
-from fastapi.responses import FileResponse
+from fastapi import FastAPI
 from backend.controller import router
-from backend.models.application_model import Application
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from fastapi import Request
-from backend.services.telegram_service import send_telegram
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],  # Разрешенный источник
+    allow_credentials=True,
+    allow_methods=["*"],  # Разрешенные методы
+    allow_headers=["*"],  # Разрешенные заголовки
+)
+
 app.include_router(router)
-
-app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
-
-templates = Jinja2Templates(directory="frontend")
-
-@app.get("/", response_class=HTMLResponse)
-async def read_form(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
-
-@app.post("/submit")
-async def handle_form(application: Application):
-    print(application)
-    return application
-    
