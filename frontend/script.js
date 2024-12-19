@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
 
           document.querySelector(".main-content").style.display = "none";
-          document.querySelector(".success-message").style.display = "block";
+          document.querySelector(".info-container.success-message").style.display = "flex";
       
           if (response.ok) {
             const result = await response.json();

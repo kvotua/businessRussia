@@ -16,10 +16,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.hidden {
-  display: none;
-}
-
 .container {
   margin: 0;
   width: 65vw;
@@ -42,6 +38,7 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   padding-block: 4vw;
+  position: relative; /* vot tut*/
 }
 
 .form::-webkit-scrollbar {
@@ -109,6 +106,20 @@ h1,
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1vw;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+
+.little-span {
+  font-size: 1.3vw;
+}
+
+.info-container.success-message {
+  display: none;
 }
 
 p {
