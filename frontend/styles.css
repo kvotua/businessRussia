@@ -99,6 +99,7 @@ h1,
   font-size: 1.6vw;
   font-weight: 600;
   margin-top: 0;
+  margin-bottom: 2vw;
   line-height: 1.2;
 }
 
@@ -112,15 +113,16 @@ h1,
   position: absolute;
   top: 50%;
   bottom: 50%;
+  left: 0%;
 }
 
 .little-span {
-  font-size: 1.3vw;
+  font-size: 0.7em;
 }
 
 .info-container.success-message {
   display: none;
-}
+} 
 
 p {
   font-size: 0.8vw;
@@ -139,6 +141,17 @@ a {
   flex-wrap: wrap;
   column-gap: 0.85vw;
   row-gap: 0.85vw;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important; 
+  -webkit-text-fill-color: rgba(46, 2, 73, 0.3);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: rgba(0, 71, 133, 1);
 }
 
 .type-button,
@@ -296,10 +309,6 @@ ul {
   border: 3px solid rgba(46, 2, 73, 0.3);
 } 
 
-/* .selected-option {
-  padding-block: 0.75vw;
-} */
-
 .custom-dropdown .arrow {
   position: absolute;
   right: 0;
@@ -351,7 +360,8 @@ ul {
     display: none;
   }
 
-  h1 {
+  h1,
+  .success-message {
     font-size: 4.1vw;
   }
 

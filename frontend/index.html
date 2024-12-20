@@ -40,10 +40,10 @@
 
             <div class="info-container">
                 <h1>Заполните дополнительные поля</h1>             
-                <input name="name" type="text" class="input" placeholder="Введите ваше имя" required>
-                <input name="phone" id="phone" class="input" placeholder="Номер телефона для связи" required>
+                <input name="name" type="text" class="input" placeholder="Введите ваше имя" minlength="2" required>
+                <input name="phone" id="phone" class="input" placeholder="Номер телефона для связи" minlength="18" required>
                 <div class="custom-dropdown">
-                    <input name="city" type="text" class="selected-option" placeholder="Выберите город" autocomplete="off" required>
+                    <input name="city" type="text" class="selected-option" placeholder="Выберите город" minlength="2" autocomplete="off" required>
                     <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 1L5 5L1 1" stroke="#2E0249" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -51,9 +51,9 @@
                     <ul class="options-list">
                     </ul>
                 </div>
-                <input name="activity" type="text" class="input" placeholder="Сфера деятельности" required>
-                <input name="organization" type="text" class="input" placeholder="Название организации" required>
-                <input name="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" required>
+                <input name="activity" type="text" class="input" placeholder="Сфера деятельности" minlength="2" required>
+                <input name="organization" type="text" class="input" placeholder="Название организации" minlength="2" required>
+                <input name="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" minlength="2" required>
             </div>
 
             <div class="info-container">

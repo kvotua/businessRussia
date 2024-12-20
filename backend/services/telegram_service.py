@@ -5,11 +5,12 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='backend/.env')
 
-async def send_telegram(business_request: BusinessRequest):
+async def send_telegram(message: str):
     url = f"https://api.telegram.org/bot{os.getenv('TELEGRAM_BOT_TOKEN')}/sendMessage"
+
     params = {
-        "chat_id": "-1002431648433",
-        "text": business_request
+        "chat_id": os.getenv('TELEGRAM_CHAT_ID'),
+        "text": message
     }
 
     async with httpx.AsyncClient() as client:
@@ -26,3 +27,4 @@ async def send_telegram(business_request: BusinessRequest):
                 return {"status": "error", "detail": "Telegram server недоступен"}
 
     return {"status": "success", "message": "Сообщение отправлено в Telegram"}
+
