@@ -6,7 +6,6 @@ def get_users():
     with Session(engine) as session:
         users = session.query(UsersNotify).all()
         return users
-        # return [{'id': user.id, 'name': user.name, 'phone': user.phone} for user in users]
 
 def add_user(name: str, phone: str):
     with Session(engine) as session:
@@ -43,7 +42,7 @@ def get_business_request(business_request_id: int):
                 'organization_name': business_request.organization_name,
                 'problem_description': business_request.problem_description
             }
-        return None
+        return "Такой заявки нет"
 
 def add_business_request(business_request: BusinessRequest):
     with Session(engine) as session:
