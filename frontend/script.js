@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify(request) 
           });
 
-          document.querySelector(".main-content").style.display = "none";
-          document.querySelector(".info-container.success-message").style.display = "flex";
+        //   document.querySelector(".main-content").style.display = "none";
+        //   document.querySelector(".info-container.success-message").style.display = "flex";
       
           if (response.ok) {
             const result = await response.json();
@@ -74,6 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         } catch (error) {
           console.error('Ошибка сети:', error);
+        }finally {
+            // Принудительно скрываем основной контент и показываем сообщение
+            document.querySelector(".main-content").style.display = "none";
+            document.querySelector(".info-container.success-message").style.display = "flex";
         }
       });   
 
