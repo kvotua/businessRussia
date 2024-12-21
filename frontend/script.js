@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
       
         try {
-          const response = await fetch("business-russia.backend.kvotua.ru/api/send", {
+          const response = await fetch("https://business-russia.backend.kvotua.ru/api/send", {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
