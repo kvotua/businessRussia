@@ -1,6 +1,6 @@
 import httpx
 import os
-from backend.models.business_request_model import BusinessRequest
+from models.business_request_model import BusinessRequest
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='backend/.env')

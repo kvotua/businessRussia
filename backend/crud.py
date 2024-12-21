@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from backend.database import engine
-from backend.models.database_model import UsersNotify, BusinessRequest
+from database import engine
+from models.database_model import UsersNotify, BusinessRequest
 
 def get_users():
     with Session(engine) as session:

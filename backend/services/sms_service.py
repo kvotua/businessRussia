@@ -1,7 +1,7 @@
 import httpx
 import os
-from backend.models.business_request_model import BusinessRequest
-from backend.crud import get_users
+from models.business_request_model import BusinessRequest
+from crud import get_users
 from dotenv import load_dotenv
 
 async def send_sms(message: str):

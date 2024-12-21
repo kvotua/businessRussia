@@ -3,5 +3,7 @@ uvicorn
 requests
 python-dotenv
 python-telegram-bot
+SQLAlchemy>=1.4.0
+pymysql
 python-jose
 passlib[bcrypt]

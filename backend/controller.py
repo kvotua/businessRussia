@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
-from backend.models.telegram_message import TelegramMessage
-from backend.services.telegram_service import send_telegram
-from backend.services.sms_service import send_sms
-from backend.services.business_request_service import save_bussiness_request
-from backend.crud import get_business_requests, create_message
-from backend.models.business_request_model import BusinessRequest
+from models.telegram_message import TelegramMessage
+from services.telegram_service import send_telegram
+from services.sms_service import send_sms
+from services.business_request_service import save_bussiness_request
+from crud import get_business_requests, create_message
+from models.business_request_model import BusinessRequest
 
 router = APIRouter()
 

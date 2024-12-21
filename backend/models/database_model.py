@@ -21,3 +21,4 @@ class BusinessRequest(Base):
     activity: str = Column(String(100), nullable=False)  
     organization_name: str = Column(String(100), nullable=False)  
     problem_description: str = Column(String(255), nullable=False) 
+
