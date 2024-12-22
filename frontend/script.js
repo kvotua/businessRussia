@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const csvFile = '/bd/cities.csv';
+    const csvFile = './bd/cities.csv';
 
     const sendButton = document.querySelector('.send-button');
 
@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 const rows = data.split('\n');
-                cities = rows.map(row => row.split(';')[0]);
+                cities = rows.map(row => row.split(',')[2]);
+                cities.sort()
                 renderOptions(cities);
             })
             .catch(error => console.error('Ошибка чтения CSV файла:', error));
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         optionsList.innerHTML = '';
         filteredCities.forEach(city => {
             const li = document.createElement('li');
-            li.innerHTML = `<img src="/images/location_mark.png" alt="" class="location-icon">${city}`;
+            li.innerHTML = `<img src="./images/location_mark.png" alt="" class="location-icon">${city}`;
             li.addEventListener('click', function() {
                 selectedOption.value = city;
                 optionsList.style.display = 'none';
@@ -62,9 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify(request) 
           });
-
-        //   document.querySelector(".main-content").style.display = "none";
-        //   document.querySelector(".info-container.success-message").style.display = "flex";
       
           if (response.ok) {
             const result = await response.json();

@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   padding-block: 4vw;
-  position: relative; /* vot tut*/
+  position: relative; 
 }
 
 .form::-webkit-scrollbar {
@@ -163,14 +163,14 @@ input,
 
 .type-button {
   color: rgba(46, 2, 73, 0.3);
-  font-weight: medium;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
   background-color: white;
   border: 2px solid rgba(46, 2, 73, 0.3);
-  border-width: 0.155vw;
+  border-width: 0.1em;
   border-radius: 0.425vw;
   padding-block: 0.75vw;
-  padding-inline: 0.9vw;
+  padding-inline: 0.7em;
 }
 
 .button-selected {
@@ -179,10 +179,14 @@ input,
   color: rgba(238, 238, 238, 1);
 }
 
-input {
+input,
+input:hover {
   padding: 0;
+  padding-bottom: 0.2em;
   border: none;
+  border-radius: 0;
   border-bottom: 3px solid rgba(46, 2, 73, 0.3);
+  border-width: 0.15em;
   color: rgba(46, 2, 73, 0.3);
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
@@ -275,6 +279,7 @@ ul {
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   margin-top: 4px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }  
 
 .custom-dropdown .options-list {
@@ -282,9 +287,8 @@ ul {
   position: absolute;
   top: 40%;
   left: 0;
-  width: 100%;
   background-color: white;
-  max-height: 25vw;
+  max-height: 50vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -295,7 +299,7 @@ ul {
 .custom-dropdown .options-list li {
   display: flex;
   align-items: center;
-  padding: 0.5vw;
+  padding: 0.7vw;
   border: none;
 }
 
@@ -307,6 +311,7 @@ ul {
 .options-list {
   border-radius: 0.425vw;
   border: 3px solid rgba(46, 2, 73, 0.3);
+  border-width: 0.15em;
 } 
 
 .custom-dropdown .arrow {
@@ -326,7 +331,7 @@ ul {
   transform-origin: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   body {
     padding: 4%;
     background-image: none;
@@ -363,6 +368,7 @@ ul {
   h1,
   .success-message {
     font-size: 4.1vw;
+    margin-bottom: 4.5vw;
   }
 
   p {
@@ -376,18 +382,20 @@ ul {
     font-size: 2.73vw;
   }
 
-input {
-  width: 100%;
-}
-
-  input, 
-  .custom-dropdown .selected-option,
-  .custom-dropdown .options-list {
-    border-width: 2px;
+  input {
+    width: 100%;
   }
 
   .custom-dropdown .options-list {
     border-radius: 1.09vw;
+  }
+
+  .custom-dropdown .options-list li {
+    padding: 1.3vw;
+  }
+
+  .custom-dropdown .options-list li .location-icon {
+    width: 4vw;
   }
 
   input:not(:last-child) {
@@ -396,10 +404,6 @@ input {
 
   .custom-dropdown .arrow {
     width: 0.7em;
-  }
-
-  .custom-dropdown .options-list li .location-icon {
-    width: 3.2vw;
   }
 
   .contacts p,
@@ -424,9 +428,8 @@ input {
 
   .type-button {
     border-radius: 1.09vw;
-    padding-block: 1.5vw;
-    padding-inline: 2.5vw;
-    border-width: 0.4vw;
+    padding-block: 1.7vw;
+    padding-inline: 2.6vw;
   }
 
   .send-button {
@@ -441,4 +444,84 @@ input {
     margin-bottom: 10vw;
   }
 
+}
+
+@media (max-width: 700px) {
+  input,
+  .options-list {
+    border-width: 0.18em;
+  }
+
+  .type-button {
+    border-width: 0.11em;
+  }
+
+  .form {
+    padding: 7%;
+    margin: 0;
+  }
+
+  h1,
+  .success-message {
+    font-size: 6vw;
+    margin-bottom: 6vw;
+  }
+
+  p {
+    font-size: 3.2vw;
+  }
+
+  input,
+  .send-button,
+  .custom-dropdown {
+    font-size: 3.5vw;
+  }
+
+  .custom-dropdown {
+    font-size: 4vw;
+  }
+
+  .custom-dropdown .options-list li {
+    padding: 2vw;
+  }
+
+  .custom-dropdown .options-list li .location-icon {
+    width: 5vw;
+  }
+
+  .type-button {
+    font-size: 4vw;
+  }
+
+  .info-container:not(:last-child) {
+    margin-bottom: 15vw;
+  }
+
+  .contacts p,
+  .contacts a {
+    font-size: 2.7vw;
+    margin: 0;
+  }
+
+  .contacts img {
+    width: 7.5vw;
+  }
+
+  input:not(:last-child) {
+    margin-bottom: 10vw;
+  }
+
+  .type-button {
+    border-radius: 1.3vw;
+    padding-block: 3vw;
+    padding-inline: 6vw;
+  }
+
+  .send-button {
+    padding-block: 4vw;
+  }
+
+  .send-button svg {
+    width: 4vw;
+  }
 }
