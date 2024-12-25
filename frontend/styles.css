@@ -192,6 +192,7 @@ input:hover {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   background-color: transparent;
+  text-overflow: ellipsis;
 }
 
 input:not(:last-child) {
@@ -288,11 +289,11 @@ ul {
   top: 40%;
   left: 0;
   background-color: white;
-  max-height: 50vh;
+  max-height: 30vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-
+  width: 99%;
   z-index: 10;
 }
 
@@ -446,18 +447,22 @@ ul {
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   input,
   .options-list {
-    border-width: 0.18em;
+    border-width: 0.14em;
   }
 
   .type-button {
     border-width: 0.11em;
   }
 
+  body {
+    padding: 3%;
+  }
+
   .form {
-    padding: 7%;
+    padding: 6%;
     margin: 0;
   }
 
@@ -473,11 +478,8 @@ ul {
 
   input,
   .send-button,
-  .custom-dropdown {
-    font-size: 3.5vw;
-  }
-
-  .custom-dropdown {
+  .custom-dropdown,
+  .type-button {
     font-size: 4vw;
   }
 
@@ -486,15 +488,11 @@ ul {
   }
 
   .custom-dropdown .options-list li .location-icon {
-    width: 5vw;
-  }
-
-  .type-button {
-    font-size: 4vw;
+    width: 5.5vw;
   }
 
   .info-container:not(:last-child) {
-    margin-bottom: 15vw;
+    margin-bottom: 17vw;
   }
 
   .contacts p,
@@ -508,11 +506,11 @@ ul {
   }
 
   input:not(:last-child) {
-    margin-bottom: 10vw;
+    margin-bottom: 17vw;
   }
 
   .type-button {
-    border-radius: 1.3vw;
+    border-radius: 1.6vw;
     padding-block: 3vw;
     padding-inline: 6vw;
   }

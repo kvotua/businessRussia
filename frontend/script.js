@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const csvFile = './bd/cities.csv';
+    const csvFile = '/bd/cities.csv';
 
     const sendButton = document.querySelector('.send-button');
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         optionsList.innerHTML = '';
         filteredCities.forEach(city => {
             const li = document.createElement('li');
-            li.innerHTML = `<img src="./images/location_mark.png" alt="" class="location-icon">${city}`;
+            li.innerHTML = `<img src="/images/location_mark.png" alt="" class="location-icon">${city}`;
             li.addEventListener('click', function() {
                 selectedOption.value = city;
                 optionsList.style.display = 'none';
