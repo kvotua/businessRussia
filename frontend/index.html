@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>businessRussia</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <div class="container">
         <form class="form">
@@ -17,93 +19,104 @@
 
             <div class="info-container success-message">
                 <span>Спасибо за обращение!</span>
-                <span class="little-span" >Наша команда скоро свяжется с Вами!</span>
+                <span class="little-span">Наша команда скоро свяжется с Вами!</span>
             </div>
 
             <div class="main-content">
-            <div class="info-container">
-                <h1>Чем полезен портал Деловой России?</h1>
-                <p>Данный портал предназначен для предпринимателей оказавшихся в непростом положении. Сообщество Деловая Россия обладает большим административным ресурсом и готова протянуть руку помощи </p>
-            </div>
+                <div class="info-container">
+                    <h1>Чем полезен портал Деловой России?</h1>
+                    <p>Данный портал предназначен для предпринимателей оказавшихся в непростом положении. Сообщество
+                        Деловая Россия обладает большим административным ресурсом и готова протянуть руку помощи </p>
+                </div>
 
-            <div class="info-container">
-                <h1>Выберите к какому типу относится ваша проблема</h1>
-                <div class="type-buttons-container">                
+                <div class="info-container">
+                    <h1>Выберите к какому типу относится ваша проблема</h1>
+                    <div class="type-buttons-container">
                         <button class="type-button" type="button">Юридическая</button>
                         <button class="type-button" type="button">Финансовая</button>
                         <button class="type-button" type="button">Персонал</button>
                         <button class="type-button" type="button">Конкуренция</button>
                         <button class="type-button" type="button">Технологическая</button>
-                        <button class="type-button" type="button">Другая</button>                
+                        <button class="type-button" type="button">Другая</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="info-container">
-                <h1>Заполните дополнительные поля</h1>             
-                <input name="name" type="text" class="input" placeholder="Введите ваше имя" minlength="2" required>
-                <input name="phone" type="tel" id="phone" class="input" placeholder="Номер телефона для связи" minlength="18" required>
-                <div class="custom-dropdown">
-                    <input name="city" type="text" class="selected-option" placeholder="Выберите город" minlength="2" autocomplete="off" required>
-                    <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 1L5 5L1 1" stroke="#2E0249" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                        
-                    <ul class="options-list">
-                    </ul>
+                <div class="info-container">
+                    <h1>Заполните дополнительные поля</h1>
+                    <input name="name" type="text" class="input" placeholder="Введите ваше имя" minlength="2" required>
+                    <input name="phone" type="tel" id="phone" class="input" placeholder="Номер телефона для связи"
+                        minlength="18" required>
+                    <div class="custom-dropdown">
+                        <input name="city" type="text" class="selected-option" placeholder="Выберите город"
+                            minlength="2" autocomplete="off" required>
+                        <svg class="arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 1L5 5L1 1" stroke="#2E0249" stroke-opacity="0.3" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <ul class="options-list">
+                        </ul>
+                    </div>
+                    <input name="activity" type="text" class="input" placeholder="Сфера деятельности" minlength="2"
+                        required>
+                    <input name="organization" type="text" class="input" placeholder="Название организации"
+                        minlength="2" required>
+                    <input name="problem-description" type="text" class="input"
+                        placeholder="Коротко, но емко опишите вашу проблему" minlength="2" required>
                 </div>
-                <input name="activity" type="text" class="input" placeholder="Сфера деятельности" minlength="2" required>
-                <input name="organization" type="text" class="input" placeholder="Название организации" minlength="2" required>
-                <input name="problem-description" type="text" class="input" placeholder="Коротко, но емко опишите вашу проблему" minlength="2" required>
-            </div>
 
-            <div class="info-container">
-                <button class="send-button" type="submit">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.9468 1.02856C24.0013 0.892261 24.0147 0.74295 23.9852 0.599136C23.9557 0.455321 23.8846 0.323327 23.7808 0.219518C23.677 0.115708 23.545 0.0446476 23.4012 0.0151464C23.2574 -0.0143547 23.1081 -0.000999479 22.9718 0.0535565L1.15126 8.78206H1.14976L0.471758 9.05206C0.343344 9.10328 0.231587 9.189 0.148832 9.29975C0.0660771 9.4105 0.0155454 9.54197 0.00281862 9.67964C-0.00990819 9.81731 0.0156652 9.95581 0.0767139 10.0799C0.137763 10.2039 0.231911 10.3087 0.348758 10.3826L0.963758 10.7726L0.965258 10.7756L8.45776 15.5426L13.2248 23.0351L13.2278 23.0381L13.6178 23.6531C13.6919 23.7695 13.7967 23.8631 13.9207 23.9238C14.0446 23.9845 14.1829 24.0098 14.3203 23.9969C14.4577 23.984 14.5889 23.9335 14.6994 23.8508C14.8099 23.7682 14.8955 23.6567 14.9468 23.5286L23.9468 1.02856ZM21.1973 3.86356L9.95626 15.1046L9.63376 14.5976C9.57467 14.5045 9.4958 14.4256 9.40276 14.3666L8.89576 14.0441L20.1368 2.80306L21.9038 2.09656L21.1988 3.86356H21.1973Z" fill="#EEEEEE"/>
-                    </svg>
-                    <span  class="send-button-text">Отправить запрос</span>
-                </button>   
-            </div>
+                <div class="info-container">
+                    <button class="send-button" type="submit">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.9468 1.02856C24.0013 0.892261 24.0147 0.74295 23.9852 0.599136C23.9557 0.455321 23.8846 0.323327 23.7808 0.219518C23.677 0.115708 23.545 0.0446476 23.4012 0.0151464C23.2574 -0.0143547 23.1081 -0.000999479 22.9718 0.0535565L1.15126 8.78206H1.14976L0.471758 9.05206C0.343344 9.10328 0.231587 9.189 0.148832 9.29975C0.0660771 9.4105 0.0155454 9.54197 0.00281862 9.67964C-0.00990819 9.81731 0.0156652 9.95581 0.0767139 10.0799C0.137763 10.2039 0.231911 10.3087 0.348758 10.3826L0.963758 10.7726L0.965258 10.7756L8.45776 15.5426L13.2248 23.0351L13.2278 23.0381L13.6178 23.6531C13.6919 23.7695 13.7967 23.8631 13.9207 23.9238C14.0446 23.9845 14.1829 24.0098 14.3203 23.9969C14.4577 23.984 14.5889 23.9335 14.6994 23.8508C14.8099 23.7682 14.8955 23.6567 14.9468 23.5286L23.9468 1.02856ZM21.1973 3.86356L9.95626 15.1046L9.63376 14.5976C9.57467 14.5045 9.4958 14.4256 9.40276 14.3666L8.89576 14.0441L20.1368 2.80306L21.9038 2.09656L21.1988 3.86356H21.1973Z"
+                                fill="#EEEEEE" />
+                        </svg>
+                        <span class="send-button-text">Отправить запрос</span>
+                    </button>
+                </div>
 
-            <div class="info-container">
-                <div class="contacts">
-                    <ul>
-                        <li class="contact">
-                            <p>Телефон</p>                            
-                            <a href="tel:74956491826">+7 (495) 649 18 26</a>
-                            <a href="tel:74956491827">+7 (495) 649 18 27</a>
-                        </li>
-                        <li class="contact">
-                            <p>Почта</p>
-                            <a href="mailto:help@dr.ru">help@dr.ru</a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./images/vk_logo.png" alt="vk logo">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./images/telegram_logo.png" alt="telegram logo">
-                            </a>                               
-                        </li>
-                    </ul> 
-                </div>                                  
-            </div>
+                <div class="info-container">
+                    <div class="contacts">
+                        <ul>
+                            <li class="contact">
+                                <p>Телефон</p>
+                                <a href="tel:74956491826">+7 (495) 649 18 26</a>
+                                <a href="tel:74956491827">+7 (495) 649 18 27</a>
+                            </li>
+                            <li class="contact">
+                                <p>Почта</p>
+                                <a href="mailto:help@dr.ru">help@dr.ru</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/vk_logo.png" alt="vk logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/telegram_logo.png" alt="telegram logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </form>
 
         <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1899799e42bbb4b98a3b11d2f3ef87cb84e4ed61e1918561cbe72df8653d4589&amp;source=constructor"></iframe>
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A1899799e42bbb4b98a3b11d2f3ef87cb84e4ed61e1918561cbe72df8653d4589&amp;source=constructor"></iframe>
         </div>
 
         <div class="flag">
             <div class="blue-stripe"></div>
-            <div class="red-stripe"></div>       
+            <div class="red-stripe"></div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/inputmask/dist/inputmask.min.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>

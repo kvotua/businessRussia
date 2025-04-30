@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   padding-block: 4vw;
-  position: relative; 
+  position: relative;
 }
 
 .form::-webkit-scrollbar {
@@ -122,7 +122,7 @@ h1,
 
 .info-container.success-message {
   display: none;
-} 
+}
 
 p {
   font-size: 0.8vw;
@@ -144,7 +144,7 @@ a {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px white inset !important; 
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
   -webkit-text-fill-color: rgba(46, 2, 73, 0.3);
 }
 
@@ -281,7 +281,7 @@ ul {
   font-family: "Montserrat", sans-serif;
   margin-top: 4px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}  
+}
 
 .custom-dropdown .options-list {
   display: none;
@@ -313,7 +313,7 @@ ul {
   border-radius: 0.425vw;
   border: 3px solid rgba(46, 2, 73, 0.3);
   border-width: 0.15em;
-} 
+}
 
 .custom-dropdown .arrow {
   position: absolute;
@@ -325,7 +325,7 @@ ul {
   pointer-events: none;
 }
 
-.custom-dropdown .selected-option:focus + .arrow path {
+.custom-dropdown .selected-option:focus+.arrow path {
   stroke: rgba(0, 71, 133, 1);
   stroke-opacity: 1;
   transform: rotate(180deg);
@@ -448,8 +448,10 @@ ul {
 }
 
 @media (max-width: 600px) {
+
   input,
   .options-list {
+    min-height: 48px;
     border-width: 0.14em;
   }
 
@@ -489,6 +491,11 @@ ul {
 
   .custom-dropdown .options-list li .location-icon {
     width: 5.5vw;
+  }
+
+  .custom-dropdown .arrow {
+    top: 18%;
+    margin-top: 0;
   }
 
   .info-container:not(:last-child) {
